@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="media/slides/slides.css" />
 	<link href="media/main.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="media/reveal.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="media/desert.css" media="all" rel="stylesheet" type="text/css" />
 	<script src="media/modernizr.js" type="text/javascript"></script>
 	<style>
 	.controls{display: none !important}
@@ -17,9 +18,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<section id="presentacion" data-background-color="">
+					<section id="presentacion" data-background-color="999999">
 						<h2>App Engine Python</h2>
-						<font style="font-size: 150px;"><img height="100px" src="http://www.sherman.ca/wp-content/uploads/2012/02/appengine_lowres.png" alt=""> + <img height="100px" src="http://www.unixstickers.com/image/cache/data/stickers/python/python.sh-600x600.png" alt=""></font>
+						<font style="font-size: 150px;"><img height="100px" src="media/img/python-logo.png" alt=""> + <img height="100px" src="media/img/gae-logo.png" alt=""></font>
 						<div>
 							<font style="font-size: 42px;">{{ titulo }}</font>
 						</div>
@@ -28,7 +29,7 @@
 							<font style="font-size: 42px;">Gastón Guidolín | GDG Lead Organizer</font>
 						</div>
 					</section>
-					<section id="appengine" data-background-color="#7a7a7a">
+					<section id="appengine" data-background-color="#939393">
 						<h2><br></h2>
 						<h2>¿Qué es App Engine?</h2>
 						<div class="horizontal-line"></div>
@@ -37,17 +38,17 @@
 						<div>Es de uso gratuito hasta cierto consumo</div>
 						<div>Ciertas limitaciones en el uso del lenguaje</div>
 					</section>
-					<section data-background-color="#757575">
+					<section data-background-color="#8e8e8e">
 						<h2>Lenguajes Soportados</h2>
 						<br>
-						<ul>
-							<li>Python</li>
-							<li>Java</li>
-							<li>Go (experimental)</li>
-							<li>PHP</li>
-						</ul>
+						
+							<div>Python</div>
+							<div>Java</div>
+							<div>Go (experimental)</div>
+							<div>PHP</div>
+						
 					</section>
-					<section id="historia" data-background-color="#707070">
+					<section id="historia" data-background-color="#898989">
 						<h2>Historia</h2>
 						<br>
 						<div>Lanzamiento GAE (7 Abril 2008)</div>
@@ -56,61 +57,208 @@
 						<br>
 						<div>Anuncio PHP + GAE (15 Mayo 2013)</div>
 					</section>
-					<section data-background-color="#6b6b6b">
+					<section data-background-color="#848484">
 						<h2>Capacidades - Limitaciones</h2>
 					</section>
-					<section data-background-color="#666666">
+					<section data-background-color="#7f7f7f">
 						<h2>Capacidades</h2>
-						<ul>
-							<li>Cuota gratuita amplia</li>
-							<li>Infraestructura optimizada para alto rendimiento</li>
-							<li>Gran soporte por parte de Google y de la Comunidad</li>
-							<li>Estatisticas de uso precargadas</li>
-							<li>Almacenamiento en la nube con alta replicación</li>
-							<li>Procesos Cron</li>
-						</ul>
+						
+							<div>Cuota gratuita amplia</div>
+							<div>Infraestructura optimizada para alto rendimiento</div>
+							<div>Gran soporte por parte de Google y de la Comunidad</div>
+							<div>Estatisticas de uso precargadas</div>
+							<div>Almacenamiento en la nube con alta replicación</div>
+							<div>Procesos Cron</div>
+						
 					</section>
-					<section data-background-color="#606060">
+					<section data-background-color="#7a7a7a">
 						<h2>Limitaciones</h2>
-						<ul>
-							<li>Deshabilitada Escritura en Disco</li>
-							<li>Comunicacion entre aplicaciones solo con servicios habilitados</li>
-							<li>Deshabilitada creacion de hilos por parte de la aplicación</li>
-							<li>Timeout = 30 seguntos, Proceso solo lanzado por peticion o tarea programada</li>
-							<li>Soporte solo Python, Java, Go y PHP</li>
-						</ul>
+						
+							<div>Deshabilitada Escritura en Disco</div>
+							<div>Comunicacion entre aplicaciones solo con servicios habilitados</div>
+							<div>Deshabilitada creacion de hilos por parte de la aplicación</div>
+							<div>Timeout = 30 seguntos, Proceso solo lanzado por peticion o tarea programada</div>
+							<div>Soporte solo Python, Java, Go y PHP</div>
+						
 					</section>
-					<section data-background-color="#5b5b5b">
+					<section data-background-color="#757575">
 						<h2>Soporte para Python</h2>
 						<br>
 						<div>Comunicación mediante protocolo CGI</div>
 						<div>Podemos trabajar tanto con WebApp como con frameworks de terceros, con la condicion de que estén completamente desarrollados en Python</div>
 						<div>Si se trabaja fuera del espacio aislado que GAE ofrece, la aplicación genra una excepción</div>
 					</section>
-					<!-- <section data-background-color="#565656">
-						<h2>Primeros Pasos</h2>
+					<section data-background-color="#707070">
+						<h2>Entorno de Desarrollo</h2>
+						
+							<div>Datastore</div>
+							<div>Simulador servidor GAE</div>
+							<div>Servicio de cuentas Google</div>
+							<div>Extracción de URL</div>
+							<div>Envio de correo electrónico</div>
+						
+					</section>
+					<section data-background-color="#6b6b6b">
+						<h2>Requisitos SDK</h2>
+						
+							<div>Python 2.5 o 2.7</div>
+							<div>SO => Linux / Windows / Mac OS X</div>
+						
+						<p>Windows / Mac : Incluye Desktop App</p>
+					</section>
+					<section data-background-color="#666666">
+						<h1>Primeros Pasos</h1>
+						<img src="media/img/loader1.gif" id="loader1" alt="">
+						<ul id="loader1Callback">
+							<div>Protocolo CGI</div>
+							<div>Resuelve de acuerdo a la solicitud</div>
+							<div>Devuelve por salida estándar</div>
+							<div>Devuelve encabezados HTTP</div>
+							<div>Devuelve Contenido</div>
+						
+					</section>
+					<section data-background-color="#606060">
+						<h2>Hello World!</h2>
+						Archivo para el controlador: helloworld.py
+						<pre class="prettyprint" style="padding: 10px">print 'Content-Type: text/plain'<br>print 'Hello World!'</pre>
+					</section>
+					<section data-background-color="#5b5b5b">
+						<h2>Archivos de Configuración</h2>
+						Archivo app.yaml
+						<pre class="prettyprint" style="padding: 10px">application: helloworld<br>version: 1<br>runtime: python <br>api_version: 1 <br><br>handlers: <br>- url: /.* <br>  script: helloworld.py</pre>
+					</section>
+					<section data-background-color="#565656">
+						<h2>Ejecución de la Aplicación</h2>
+						Desde la consola
+						<pre class="prettyprint" style="padding: 10px">>>dev_appserver.py helloworld</pre>
 					</section>
 					<section data-background-color="#515151">
-						<h2>WebApp</h2>
+						<h1>WebApp 2.0</h1>
+						
+							<div>Incluido en el SDK de GAE</div>
+							<div>Framework simple para aplicaciones web</div>
+							<div>Optimizado para GAE</div>
+						
 					</section>
 					<section data-background-color="#4c4c4c">
-						<h2>Formularios</h2>
+						<h2>Hello WebApp World!</h2>
+						hellowebappworld.py
+						<pre class="prettyprint" style="padding: 10px">from google.appengine.ext import webapp <br>from google.appengine.ext.webapp.util import run_wsgi_app <br><br>class MainPage(webApp.RequestHandler): <br>  def get(self): <br>    self.response.headers[‘Content-Type’] = ‘text/plain’ <br>    self.response.out.write(‘Hello webapp world!’) <br><br>application = webapp.WSGIapplication([(‘/’,MainPage)],debug=True) <br><br>def main(): <br>  run_wsgi_app(application) <br><br>if __name__ == “__main__” <br>  main()</pre>
 					</section>
 					<section data-background-color="#474747">
-						<h2>Datastore</h2>
+						<h2>Controladores de solicitudes</h2>
+						Métodos permitidos: <br>
+						
+							<div>get()</div>
+							<div>post()</div>
+							<div>head()</div>
+							<div>options()</div>
+							<div>put()</div>
+							<div>delete()</div>
+							<div>trace()</div>
+						
 					</section>
-					<section data-background-color="#424242">
-						<h2>Archivos Estáticos</h2>
+					<section data-background-color="#484848">
+						<h2>Acceso a datos de la solicitud</h2>
+						Acceso simple:
+						<pre class="prettyprint" style="padding: 10px">#&#60;input type="text" name="nombre" /&#62;<br>nomre = self.request.get('nombre')</pre>
+						Acceso Múltiple:
+						<pre class="prettyprint" style="padding: 10px">#&#60;select name="estudios"  multiple="true"&#62;...&#60;/select&#62;<br> estudios = self.request.get(estudios, allow_multiple=True)</pre>
+						Acceso a toda la petición:
+						<pre class="prettyprint" style="padding: 10px">todos_los_datos = self.request.body</pre>
 					</section>
 					<section data-background-color="#3d3d3d">
-						<h2>Plantillas Django</h2>
+						<h2>Creación de una respuesta</h2> <br><br>
+						<pre class="prettyprint" style="padding: 10px">class Handler (webapp.RequestHandler): <br>  def get(self): <br>    #procesamiento de datos recibidos<br>    self.response.out.write('Esta es mi respuesta')</pre>
 					</section>
 					<section data-background-color="#383838">
-						<h2>Ejemplos de Aplicaciones</h2>
+						<h1>Funciones útiles</h1>
+						<h3>Redirección</h3>
+						<pre class="prettyprint" style="padding: 10px">self.redirect('/home')</pre>
+						<h3>Cabeceras</h3>
+						<pre class="prettyprint" style="padding: 10px">#modificar cabecera existente <br>self.response.headers('Content-Type') = 'image/png' <br>#añadir nueva cabecera <br>self.response.add_header('Expires','Thu, 01 Dec 2013 16:00:00 GMT')</pre>
+						<h3>Errores</h3>
+						<pre class="prettyprint" style="padding: 10px">#enviamos un error 404 <br>self.error(404)</pre>
+						<h3></h3>
 					</section>
 					<section data-background-color="#333333">
-						<h2>Deployment</h2>
-					</section> -->
+						<h1>Servicios</h1>
+						
+							<div>MemCaché</div>
+							<div>Extracción URL</div>
+							<div>Correo</div>
+							<div>XMPP</div>
+							<div>Imágenes</div>
+							<div>Google Accounts</div>
+							<div>Cola de Tareas (Experimental)</div>
+							<div>Almacen Blob (Experimental)</div>
+						
+					</section>
+					<section data-background-color="#2d2d2d">
+						<h1>Datastore</h1>
+						
+							<div>Sólido</div>
+							<div>Escalable</div>
+							<div>Optimizado</div>
+							<div>Entidades</div>
+							<div>Indexado</div>
+							<div>Transacciones</div>
+							<div>Arquitectura distribuida</div>
+						
+					</section>
+					<section data-background-color="#282828">
+						<h2>Eleccion del Datastore</h2>
+						<table>
+							<thead>
+								<th>Principal/Secundario</th>
+								<th>Replicación de alta disponibilidad</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td><h6>Se basa en un sistema de replicación asíncrona. Ofrece consistencia fuerte para consultas y lecturas, pero se producen periodos de inactividad por incidencias en los centros de datos o mantenimiento.Esta es la de más bajo coste</h6></td>
+									<td><h6>Replicación mediante sistema basado en el algoritmo Paxos. Gran disponibilidad para las operaciones de lectura y escritura, consultas de consistencia eventual. Coste de 3 veces que la anterior.</h6></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section data-background-color="#232323">
+						<h2>API Python Datastore</h2>
+						<br>
+						
+							<div>PyObj => Entidad</div>
+							<div>Sin esquema</div>
+							<div>Interfaces para consultas</div>
+							<div>GQL</div>
+						
+					</section>
+					<section data-background-color="#1e1e1e">
+						<h2>Entidades y Propiedades</h2>
+					</section>
+					<section data-background-color="#191919">
+						<h2>Consultas e índices</h2>
+					</section>
+					<section data-background-color="#141414">
+						<h2>Transacciones y Grupos de Entidades</h2>
+					</section>
+					<section data-background-color="#0f0f0f">
+						<h2>GQL / Datastore VS SQL</h2>
+						
+					</section>
+					<section data-background-color="#0a0a0a">
+						<h1>Templates</h1>
+					</section>
+					<section data-background-color="#050505">
+						<h1>Subida de Aplicaciones:</h1>
+					</section>
+					<section data-background-color="#000000">
+						<h1>Ejemplos de código</h1>
+					</section>
+					<section data-background-color="#000000">
+						<h1>Links</h1>
+						<div>Slides:<a href="http://serpientesyaviones.appspot.com" target="_blank">http://serpientesyaviones.appspot.com</a></div>
+						<div>Repo:<a href="https://github.com/tonga298/serpientesyaviones" target="_blank">https://github.com/tonga298/serpientesyaviones</a></div>
+						<div>Aplicaciones de Muestra<a href="https://code.google.com/p/google-app-engine-samples/" target="_blank">https://code.google.com/p/google-app-engine-samples/</a></div>
+					</section>
 				</section>
 			</div>
 		</div>
@@ -140,21 +288,9 @@
 			}
 		}
 		</script>
-		<script src="/media/jquery.js" type="text/javascript"></script>
-		<script src="/media/reveal.min.js" type="text/javascript"></script>
-
-		<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
-			NREUMQ.push(["load",new Date().getTime()]);
-			var e=document.createElement("script");
-			e.type="text/javascript";
-			e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
-			"js-agent.newrelic.com/nr-100.js";
-			document.body.appendChild(e);
-			if(NREUMQ.a)NREUMQ.a();
-		};
-		NREUMQ.a=window.onload;window.onload=NREUMQ.f;
-	};
-	NREUMQ.push(["nrfj","beacon-5.newrelic.com","4fd2e9786b","1563900","cApZREQKWl9XFxZQVlAORB9QEFpfQQZLUVZd",0,24,new Date().getTime(),"","","","",""]);</script></body>
-
-	<!-- Mirrored from slid.es/gastonguidolin/pythongae/fullscreen by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 04 Sep 2013 02:09:15 GMT -->
+		<script src="media/jquery.js" type="text/javascript"></script>
+		<script src="media/reveal.min.js" type="text/javascript"></script>
+		<script src="media/main.js" type="text/javascript"></script>
+		<script src="media/prettify.js"></script>
+	</body>
 	</html>
