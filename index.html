@@ -153,7 +153,7 @@
 					<section data-background-color="#484848">
 						<h2>Acceso a datos de la solicitud</h2>
 						Acceso simple:
-						<pre class="prettyprint" style="padding: 10px">#&#60;input type="text" name="nombre" /&#62;<br>nomre = self.request.get('nombre')</pre>
+						<pre class="prettyprint" style="padding: 10px">#&#60;input type="text" name="nombre" /&#62;<br>nombre = self.request.get('nombre')</pre>
 						Acceso Múltiple:
 						<pre class="prettyprint" style="padding: 10px">#&#60;select name="estudios"  multiple="true"&#62;...&#60;/select&#62;<br> estudios = self.request.get(estudios, allow_multiple=True)</pre>
 						Acceso a toda la petición:
@@ -176,14 +176,17 @@
 					<section data-background-color="#333333">
 						<h1>Servicios</h1>
 						<br>
-						<div>MemCaché</div>
-						<div>Extracción URL</div>
-						<div>Correo</div>
-						<div>XMPP</div>
+						<div>Blob Store</div>
+						<div>Datastore</div>
 						<div>Imágenes</div>
-						<div>Google Accounts</div>
+						<div>Correo</div>
+						<div>Memcaché</div>
+						<div>Multicliente</div>
+						<div>OAuth</div>
 						<div>Cola de Tareas (Experimental)</div>
-						<div>Almacen Blob (Experimental)</div>
+						<div><strong>Extracción de URL</strong></div>
+						<div><strong>Usuarios</strong></div>
+						<div>XMPP</div>
 					</section>
 					<section data-background-color="#2d2d2d">
 						<h1>Datastore</h1>
@@ -293,8 +296,8 @@
 				title: "Python + GAE",
 				description: "",
 				published: false,
-				background_transition: "slide",
-				transition: "default",
+				background_transition: "fade",
+				transition: "linear",
 				theme_id: "",
 				theme_font: "merriweather",
 				theme_color: "black-orange",
