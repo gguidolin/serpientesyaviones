@@ -42,13 +42,27 @@ class ErrorTest(webapp.RequestHandler):
 
 class Url_fetch(webapp.RequestHandler):
     def get(self):
-        url = "http://www.google.com/"
+        url = "https://developers.google.com/"
         result = urlfetch.fetch(url)
         if result.status_code == 200:
+            self.response.headers['Content-Type'] = 'text/html'
+            # self.response.out.write('<pre>')
             self.response.out.write(result.content)
 
+
+class Database(webapp.RequestHandler):
+    def get(self):
+        calle = self.request.get('calle')
+        almacenar = Direccion(calle=calle,nro = int(self.request.get('nro')))
+        almacenar.put()
+
+class Direccion(db.Model):
+    direccion = db.StringProperty(multiline=False)
+    nro = db.IntegerProperty()
+
+
 class Usuarios(db.Model):
-    nickname = db.StringProperty(multiline=False)
+    nickname = db.StringProperty()
     email = db.EmailProperty()
 
-app = webapp.WSGIApplication([('/',MainPage),('/users',User_accounts),('/errors',ErrorTest),('/url',Url_fetch)],debug=True)
+app = webapp.WSGIApplication([('/',MainPage),('/users',User_accounts),('/errors',ErrorTest),('/fetch',Url_fetch),('/datastore',Database)],debug=True)

@@ -137,7 +137,7 @@
 					<section data-background-color="#4c4c4c">
 						<h2>Hello WebApp World!</h2>
 						hellowebappworld.py
-						<pre class="prettyprint" style="padding: 10px">from google.appengine.ext import webapp <br>from google.appengine.ext.webapp.util import run_wsgi_app <br><br>class MainPage(webApp.RequestHandler): <br>  def get(self): <br>    self.response.headers[‘Content-Type’] = ‘text/plain’ <br>    self.response.out.write(‘Hello webapp world!’) <br><br>application = webapp.WSGIapplication([(‘/’,MainPage)],debug=True) <br><br>def main(): <br>  run_wsgi_app(application) <br><br>if __name__ == “__main__” <br>  main()</pre>
+						<pre class="prettyprint" style="padding: 10px">from google.appengine.ext import webapp <br>from google.appengine.ext.webapp.util import run_wsgi_app <br><br>class MainPage(webapp.RequestHandler): <br>  def get(self): <br>    self.response.headers['Content-Type'] = 'text/plain' <br>    self.response.out.write('Hello webapp world!') <br><br>application = webapp.WSGIapplication([('/',MainPage)],debug=True) <br><br>def main(): <br>  run_wsgi_app(application) <br><br>if __name__ == "__main__" <br>  main()</pre>
 					</section>
 					<section data-background-color="#474747">
 						<h2>Controladores de solicitudes</h2>
@@ -155,7 +155,7 @@
 						Acceso simple:
 						<pre class="prettyprint" style="padding: 10px">#&#60;input type="text" name="nombre" /&#62;<br>nombre = self.request.get('nombre')</pre>
 						Acceso Múltiple:
-						<pre class="prettyprint" style="padding: 10px">#&#60;select name="estudios"  multiple="true"&#62;...&#60;/select&#62;<br> estudios = self.request.get(estudios, allow_multiple=True)</pre>
+						<pre class="prettyprint" style="padding: 10px">#&#60;select name="estudios"  multiple="true"&#62;...&#60;/select&#62;<br> estudios = self.request.get('estudios', allow_multiple=True)</pre>
 						Acceso a toda la petición:
 						<pre class="prettyprint" style="padding: 10px">todos_los_datos = self.request.body</pre>
 					</section>
